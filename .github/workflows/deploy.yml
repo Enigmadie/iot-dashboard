@@ -1,0 +1,17 @@
+name: Deploy iot-dashboard
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Deploy
+        run: |
+          /home/godo/deploy/iot-dashboard.sh

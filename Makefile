@@ -1,9 +1,12 @@
-.PHONY: install dev build preview lint lint-fix format format-check check check-watch verify clean
+.PHONY: install start dev build preview lint lint-fix format format-check check check-watch verify clean
 
 BUN := bun
 
 install:
 	$(BUN) install
+
+start:
+	$(BUN) run dev
 
 dev:
 	$(BUN) run dev
